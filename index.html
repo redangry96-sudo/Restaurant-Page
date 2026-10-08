@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurum & Ember | Fine Dining Experience</title>
+    <meta name="description" content="Experience world-class fine dining at Aurum & Ember. Award-winning chefs, premium ingredients, and an unforgettable culinary journey.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+        
+<base target="_blank">
+<base target="_blank">
+</head>
+<body>
+
+<div class="loader" id="loader"><div class="loader-spinner"></div></div>
+
+<div class="toast" id="toast">
+    <div class="toast-icon"><i class="fas fa-check"></i></div>
+    <div class="toast-content">
+        <h4 id="toastTitle">Success!</h4>
+        <p id="toastMessage">Your action was completed.</p>
+    </div>
+</div>
+
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="#" class="logo"><i class="fas fa-utensils"></i> Aurum & Ember</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-cta">
+            <a href="#reservation" class="btn btn-primary"><i class="fas fa-calendar-alt"></i> Book Table</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+        </div>
+    </div>
+</nav>
+
+<section class="hero" id="home">
+    <div class="hero-bg"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80" alt="Fine Dining" loading="eager"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    <div class="hero-content">
+        <div class="hero-text">
+            <div class="hero-label">Welcome to Aurum & Ember</div>
+            <h1 class="hero-title">Experience Fine Dining <br><span>Like Never Before</span></h1>
+            <p class="hero-subtitle">Indulge in an extraordinary culinary journey where every dish tells a story. Our award-winning chefs craft unforgettable flavors using the finest ingredients from around the world.</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary"><i class="fas fa-shopping-bag"></i> Order Now</a>
+                <a href="#reservation" class="btn btn-outline"><i class="fas fa-calendar-check"></i> Book a Table</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-image-main"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80" alt="Gourmet Dish" loading="eager"></div>
+            <div class="hero-floating-card hero-floating-card-1"><i class="fas fa-star"></i><div class="hero-floating-card-text"><h4>Customer Rating</h4><p>4.9/5.0</p></div></div>
+            <div class="hero-floating-card hero-floating-card-2"><i class="fas fa-award"></i><div class="hero-floating-card-text"><h4>Awards Won</h4><p>15+</p></div></div>
+        </div>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-images reveal">
+                <div class="about-img-main"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80" alt="Restaurant Interior" loading="lazy"></div>
+                <div class="about-img-secondary"><img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400&q=80" alt="Chef Cooking" loading="lazy"></div>
+            </div>
+            <div class="about-content reveal">
+                <span class="section-label">Our Story</span>
+                <h2>Crafting Culinary <span>Excellence</span> Since 2008</h2>
+                <p>Founded by Chef Marcus Aurelius, Aurum & Ember began as a humble dream to redefine fine dining. What started as a small bistro has evolved into one of the most celebrated restaurants in the city.</p>
+                <p>Our philosophy is simple: source the finest seasonal ingredients, honor traditional techniques, and present each dish as a work of art. Every plate that leaves our kitchen carries the passion and precision of our world-class culinary team.</p>
+                <p>With over 15 years of experience, Chef Aurelius has trained under Michelin-starred masters across Europe and Asia, bringing a unique fusion of flavors that has earned us numerous accolades.</p>
+                <div class="about-stats">
+                    <div class="stat-item"><div class="stat-number" data-target="15">0</div><div class="stat-label">Years Experience</div></div>
+                    <div class="stat-item"><div class="stat-number" data-target="50000">0</div><div class="stat-label">Happy Customers</div></div>
+                    <div class="stat-item"><div class="stat-number" data-target="120000">0</div><div class="stat-label">Dishes Served</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="menu-combined" id="menu">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-label">Our Menu</span>
+            <h2 class="section-title">Explore Our <span>Culinary</span> World</h2>
+            <p class="section-subtitle">From wood-fired classics to signature creations, discover flavors crafted with passion.</p>
+        </div>
+
+        <div class="categories-grid">
+            <div class="category-card reveal active" data-filter="all" onclick="filterMenu('all', this)">
+                <div class="category-icon"><i class="fas fa-th-large"></i></div>
+                <h3 class="category-name">All</h3>
+                <p class="category-count">80+ Items</p>
+            </div>
+            <div class="category-card reveal" data-filter="steak" onclick="filterMenu('steak', this)">
+                <div class="category-icon"><i class="fas fa-drumstick-bite"></i></div>
+                <h3 class="category-name">Steaks</h3>
+                <p class="category-count">10 Items</p>
+            </div>
+            <div class="category-card reveal" data-filter="pizza" onclick="filterMenu('pizza', this)">
+                <div class="category-icon"><i class="fas fa-pizza-slice"></i></div>
+                <h3 class="category-name">Pizza</h3>
+                <p class="category-count">12 Items</p>
+            </div>
+            <div class="category-card reveal" data-filter="pasta" onclick="filterMenu('pasta', this)">
+                <div class="category-icon"><i class="fas fa-bacon"></i></div>
+                <h3 class="category-name">Pasta</h3>
+                <p class="category-count">14 Items</p>
+            </div>
+            <div class="category-card reveal" data-filter="seafood" onclick="filterMenu('seafood', this)">
+                <div class="category-icon"><i class="fas fa-fish"></i></div>
+                <h3 class="category-name">Seafood</h3>
+                <p class="category-count">11 Items</p>
+            </div>
+            <div class="category-card reveal" data-filter="dessert" onclick="filterMenu('dessert', this)">
+                <div class="category-icon"><i class="fas fa-ice-cream"></i></div>
+                <h3 class="category-name">Desserts</h3>
+                <p class="category-count">9 Items</p>
+            </div>
+            <div class="category-card reveal" data-filter="drinks" onclick="filterMenu('drinks', this)">
+                <div class="category-icon"><i class="fas fa-wine-glass-alt"></i></div>
+                <h3 class="category-name">Drinks</h3>
+                <p class="category-count">20 Items</p>
+            </div>
+            <div class="category-card reveal" data-filter="burger" onclick="filterMenu('burger', this)">
+                <div class="category-icon"><i class="fas fa-hamburger"></i></div>
+                <h3 class="category-name">Burgers</h3>
+                <p class="category-count">8 Items</p>
+            </div>
+            <div class="category-card reveal" data-filter="special" onclick="filterMenu('special', this)">
+                <div class="category-icon"><i class="fas fa-utensils"></i></div>
+                <h3 class="category-name">Specials</h3>
+                <p class="category-count">6 Items</p>
+            </div>
+        </div>
+
+        <div class="featured-header reveal">
+            <h3 class="featured-subtitle">Signature <span>Dishes</span></h3>
+            <p class="featured-desc">Our chef's carefully curated selection of premium dishes.</p>
+        </div>
+        <div class="featured-grid" id="featuredGrid">
+            <div class="dish-card" data-category="steak">
+                <div class="dish-image"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80" alt="Wagyu Steak" loading="lazy"><span class="dish-badge">Chef's Choice</span></div>
+                <div class="dish-content"><h3 class="dish-name">A5 Wagyu Ribeye</h3><p class="dish-desc">Premium Japanese A5 Wagyu with truffle butter, roasted garlic, and herb jus.</p><div class="dish-footer"><span class="dish-price">$185</span><button class="dish-order" onclick="showToast('Added to Cart','A5 Wagyu Ribeye added to your order.')"><i class="fas fa-plus"></i></button></div></div>
+            </div>
+            <div class="dish-card" data-category="pizza">
+                <div class="dish-image"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80" alt="Truffle Pizza" loading="lazy"></div>
+                <div class="dish-content"><h3 class="dish-name">Black Truffle Pizza</h3><p class="dish-desc">Wood-fired sourdough with black truffle, burrata, and aged parmesan.</p><div class="dish-footer"><span class="dish-price">$48</span><button class="dish-order" onclick="showToast('Added to Cart','Black Truffle Pizza added to your order.')"><i class="fas fa-plus"></i></button></div></div>
+            </div>
+            <div class="dish-card" data-category="seafood">
+                <div class="dish-image"><img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&q=80" alt="Grilled Salmon" loading="lazy"><span class="dish-badge">Popular</span></div>
+                <div class="dish-content"><h3 class="dish-name">Atlantic Salmon</h3><p class="dish-desc">Pan-seared salmon with lemon butter sauce, asparagus, and wild rice.</p><div class="dish-footer"><span class="dish-price">$52</span><button class="dish-order" onclick="showToast('Added to Cart','Atlantic Salmon added to your order.')"><i class="fas fa-plus"></i></button></div></div>
+            </div>
+            <div class="dish-card" data-category="pasta">
+                <div class="dish-image"><img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=600&q=80" alt="Lobster Pasta" loading="lazy"></div>
+                <div class="dish-content"><h3 class="dish-name">Lobster Linguine</h3><p class="dish-desc">Fresh Maine lobster with handmade pasta in a rich saffron cream sauce.</p><div class="dish-footer"><span class="dish-price">$68</span><button class="dish-order" onclick="showToast('Added to Cart','Lobster Linguine added to your order.')"><i class="fas fa-plus"></i></button></div></div>
+            </div>
+            <div class="dish-card" data-category="dessert">
+                <div class="dish-image"><img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80" alt="Chocolate Dessert" loading="lazy"><span class="dish-badge">Dessert</span></div>
+                <div class="dish-content"><h3 class="dish-name">Gold Leaf Souffle</h3><p class="dish-desc">Dark chocolate souffle with edible gold leaf and vanilla bean ice cream.</p><div class="dish-footer"><span class="dish-price">$32</span><button class="dish-order" onclick="showToast('Added to Cart','Gold Leaf Souffle added to your order.')"><i class="fas fa-plus"></i></button></div></div>
+            </div>
+            <div class="dish-card" data-category="special">
+                <div class="dish-image"><img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&q=80" alt="Gourmet Soup" loading="lazy"></div>
+                <div class="dish-content"><h3 class="dish-name">Truffle Mushroom Soup</h3><p class="dish-desc">Creamy wild mushroom soup with black truffle oil and crispy croutons.</p><div class="dish-footer"><span class="dish-price">$28</span><button class="dish-order" onclick="showToast('Added to Cart','Truffle Mushroom Soup added to your order.')"><i class="fas fa-plus"></i></button></div></div>
+            </div>
+            <div class="dish-card" data-category="drinks">
+                <div class="dish-image"><img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=600&q=80" alt="Signature Cocktail" loading="lazy"><span class="dish-badge">Bar Special</span></div>
+                <div class="dish-content"><h3 class="dish-name">Ember Old Fashioned</h3><p class="dish-desc">Small-batch bourbon, smoked maple syrup, angostura bitters, and an orange twist.</p><div class="dish-footer"><span class="dish-price">$22</span><button class="dish-order" onclick="showToast('Added to Cart','Ember Old Fashioned added to your order.')"><i class="fas fa-plus"></i></button></div></div>
+            </div>
+            <div class="dish-card" data-category="burger">
+                <div class="dish-image"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80" alt="Gourmet Burger" loading="lazy"><span class="dish-badge">New</span></div>
+                <div class="dish-content"><h3 class="dish-name">Aurum Wagyu Burger</h3><p class="dish-desc">Wagyu beef patty, brioche bun, aged cheddar, caramelized onions, and truffle aioli.</p><div class="dish-footer"><span class="dish-price">$42</span><button class="dish-order" onclick="showToast('Added to Cart','Aurum Wagyu Burger added to your order.')"><i class="fas fa-plus"></i></button></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="why-us">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-label">Why Us</span>
+            <h2 class="section-title">The Aurum & Ember <span>Difference</span></h2>
+            <p class="section-subtitle">We go above and beyond to ensure every visit exceeds your expectations.</p>
+        </div>
+        <div class="why-us-grid">
+            <div class="why-card reveal"><div class="why-icon"><i class="fas fa-leaf"></i></div><h3 class="why-title">Fresh Ingredients</h3><p class="why-desc">We source only the freshest, locally-sourced organic ingredients daily from trusted farms and suppliers.</p></div>
+            <div class="why-card reveal"><div class="why-icon"><i class="fas fa-user-tie"></i></div><h3 class="why-title">Expert Chefs</h3><p class="why-desc">Our culinary team consists of award-winning chefs with decades of combined experience in fine dining.</p></div>
+            <div class="why-card reveal"><div class="why-icon"><i class="fas fa-bolt"></i></div><h3 class="why-title">Fast Service</h3><p class="why-desc">Despite our attention to detail, we ensure prompt service without compromising on quality or presentation.</p></div>
+            <div class="why-card reveal"><div class="why-icon"><i class="fas fa-gem"></i></div><h3 class="why-title">Premium Quality</h3><p class="why-desc">Every dish is crafted with precision using premium-grade ingredients and time-honored techniques.</p></div>
+            <div class="why-card reveal"><div class="why-icon"><i class="fas fa-shield-alt"></i></div><h3 class="why-title">Hygienic Kitchen</h3><p class="why-desc">Our kitchen maintains the highest standards of cleanliness and food safety, certified by health authorities.</p></div>
+            <div class="why-card reveal"><div class="why-icon"><i class="fas fa-heart"></i></div><h3 class="why-title">Made with Love</h3><p class="why-desc">Every plate is prepared with passion and care, ensuring a memorable dining experience every time.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="reviews" id="reviews">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-label">Testimonials</span>
+            <h2 class="section-title">What Our <span>Guests</span> Say</h2>
+            <p class="section-subtitle">Hear from our valued customers about their unforgettable experiences.</p>
+        </div>
+        <div class="reviews-slider">
+            <div class="reviews-track" id="reviewsTrack">
+                <div class="review-card">
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-text">"An absolutely transcendent dining experience. The Wagyu steak was cooked to perfection, and the ambiance made our anniversary truly special."</p>
+                    <div class="review-author"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Sarah Mitchell" class="review-avatar" loading="lazy"><div><div class="review-name">Sarah Mitchell</div><div class="review-role">Food Critic, NY Times</div></div></div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-text">"The best fine dining restaurant I've visited in years. The truffle pizza is a masterpiece, and the service was impeccable."</p>
+                    <div class="review-author"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="James Rodriguez" class="review-avatar" loading="lazy"><div><div class="review-name">James Rodriguez</div><div class="review-role">Executive Chef</div></div></div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                    <p class="review-text">"From the moment we walked in, we felt like royalty. The lobster linguine was divine, and the wine pairing suggestions were spot on."</p>
+                    <div class="review-author"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Emily Chen" class="review-avatar" loading="lazy"><div><div class="review-name">Emily Chen</div><div class="review-role">Travel Blogger</div></div></div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-text">"The gold leaf souffle alone is worth the trip. Exceptional attention to detail, stunning presentation, and flavors that linger in your memory."</p>
+                    <div class="review-author"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80" alt="Michael Torres" class="review-avatar" loading="lazy"><div><div class="review-name">Michael Torres</div><div class="review-role">Restaurant Reviewer</div></div></div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-text">"Celebrated my birthday here and it was magical. The staff went above and beyond. The ambiance, food, and service created the perfect evening."</p>
+                    <div class="review-author"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&q=80" alt="Olivia Park" class="review-avatar" loading="lazy"><div><div class="review-name">Olivia Park</div><div class="review-role">Regular Guest</div></div></div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-text">"As a fellow chef, I can appreciate the mastery here. Every element on the plate serves a purpose. The Atlantic salmon was cooked with absolute precision."</p>
+                    <div class="review-author"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80" alt="David Kim" class="review-avatar" loading="lazy"><div><div class="review-name">David Kim</div><div class="review-role">Michelin Star Chef</div></div></div>
+                </div>
+            </div>
+        </div>
+        <div class="reviews-nav">
+            <button class="review-nav-btn" id="prevReview"><i class="fas fa-chevron-left"></i></button>
+            <button class="review-nav-btn" id="nextReview"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+</section>
+
+<section class="reservation" id="reservation">
+    <div class="container">
+        <div class="reservation-grid">
+            <div class="reservation-image reveal"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80" alt="Restaurant Table" loading="lazy"></div>
+            <div class="reservation-form reveal">
+                <span class="section-label">Reservations</span>
+                <h2 style="font-family:var(--font-display);font-size:2.5rem;margin-bottom:8px;">Book Your <span style="color:var(--gold);">Table</span></h2>
+                <p style="color:var(--text-secondary);margin-bottom:32px;">Reserve your spot for an unforgettable dining experience.</p>
+                <form id="reservationForm">
+                    <div class="form-row">
+                        <div class="form-group"><label><i class="fas fa-user" style="margin-right:8px;color:var(--gold);"></i>Full Name</label><input type="text" placeholder="John Doe" required></div>
+                        <div class="form-group"><label><i class="fas fa-envelope" style="margin-right:8px;color:var(--gold);"></i>Email</label><input type="email" placeholder="john@example.com" required></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group"><label><i class="fas fa-phone" style="margin-right:8px;color:var(--gold);"></i>Phone</label><input type="tel" placeholder="+1 (555) 000-0000" required></div>
+                        <div class="form-group"><label><i class="fas fa-users" style="margin-right:8px;color:var(--gold);"></i>Guests</label><select required><option value="">Select guests</option><option value="1">1 Person</option><option value="2">2 People</option><option value="3">3 People</option><option value="4">4 People</option><option value="5">5 People</option><option value="6">6+ People</option></select></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group"><label><i class="fas fa-calendar" style="margin-right:8px;color:var(--gold);"></i>Date</label><input type="date" required></div>
+                        <div class="form-group"><label><i class="fas fa-clock" style="margin-right:8px;color:var(--gold);"></i>Time</label><select required><option value="">Select time</option><option value="17:00">5:00 PM</option><option value="17:30">5:30 PM</option><option value="18:00">6:00 PM</option><option value="18:30">6:30 PM</option><option value="19:00">7:00 PM</option><option value="19:30">7:30 PM</option><option value="20:00">8:00 PM</option><option value="20:30">8:30 PM</option><option value="21:00">9:00 PM</option></select></div>
+                    </div>
+                    <div class="form-group"><label><i class="fas fa-comment" style="margin-right:8px;color:var(--gold);"></i>Special Requests</label><textarea placeholder="Any dietary restrictions, special occasions, or seating preferences..."></textarea></div>
+                    <button type="submit" class="btn btn-primary" style="width:100%;padding:16px;"><i class="fas fa-calendar-check"></i> Book Table Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="gallery">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-label">Gallery</span>
+            <h2 class="section-title">A Visual <span>Feast</span></h2>
+            <p class="section-subtitle">Glimpses of our culinary artistry and elegant ambiance.</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=600&q=80" alt="Chef Plating" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-item-title">Chef's Precision</span></div></div>
+            <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80" alt="Dining Room" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-item-title">Elegant Dining Room</span></div></div>
+            <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80" alt="Fine Dining" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-item-title">Fine Dining Setup</span></div></div>
+            <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&q=80" alt="Dessert Art" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-item-title">Dessert Artistry</span></div></div>
+            <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&q=80" alt="Bar Area" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-item-title">Premium Bar</span></div></div>
+            <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1550966871-3ed3c47e2ce2?w=600&q=80" alt="Wine Selection" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-item-title">Wine Collection</span></div></div>
+            <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=600&q=80" alt="Kitchen" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-item-title">Open Kitchen</span></div></div>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info reveal">
+                <span class="section-label">Get in Touch</span>
+                <h2>Visit <span>Us</span> Today</h2>
+                <p>We'd love to hear from you. Reach out for reservations, inquiries, or just to say hello.</p>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div><h4>Address</h4><p>123 Gourmet Avenue, Culinary District<br>New York, NY 10001</p></div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                    <div><h4>Phone</h4><p>+1 (555) 123-4567</p></div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div><h4>Email</h4><p>reservations@aurumember.com</p></div>
+                </div>
+                <div class="contact-social">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-yelp"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-tripadvisor"></i></a>
+                </div>
+            </div>
+            <div class="contact-map reveal">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.217676750664!2d-73.98784408459418!3d40.75797467932688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo"><i class="fas fa-utensils"></i> Aurum & Ember</a>
+                <p>Experience the art of fine dining at Aurum & Ember. Where every meal is a masterpiece and every guest is family.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links-col">
+                <h4 class="footer-title">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Our Menu</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#reviews">Testimonials</a></li>
+                    <li><a href="#reservation">Reservations</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-col">
+                <h4 class="footer-title">Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+            <div class="footer-hours-col">
+                <h4 class="footer-title">Opening Hours</h4>
+                <div class="footer-hours">
+                    <p>Monday - Thursday <span>5:00 PM - 10:00 PM</span></p>
+                    <p>Friday - Saturday <span>5:00 PM - 11:00 PM</span></p>
+                    <p>Sunday <span>4:00 PM - 9:00 PM</span></p>
+                    <p>Happy Hour <span>5:00 PM - 7:00 PM</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2026 Aurum & Ember. All rights reserved. Crafted with passion.</p>
+            <div class="footer-social">
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"
+>
+
+</script>
+
+</body>
+</html>
